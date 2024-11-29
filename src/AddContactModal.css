@@ -1,0 +1,100 @@
+/* AddContactModal.css */
+
+/* Modal Positioning */
+.modal-dialog {
+    position: absolute;
+    top: 120px;  /* Align with the search bar */
+    left: 215px; /* Position near the search bar */
+    font-family: 'Garamond', serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #004c56;
+    border-radius: 2%;
+    animation: scaleIn 0.2s linear;
+}
+
+/* Keyframes for the animation */
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Modal content styling */
+.modal-content {
+    border-radius: 20px;
+    padding: 10px;
+    width: 650px;
+    height: 380px;
+    color: white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal header - add space for close button */
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* Ensure space for both title and close button */
+    padding: 10px;
+    border-bottom: none; /* Remove default border */
+}
+
+/* Container for the contact form */
+.contact-form-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start; /* Align form inputs to the left */
+    font-family: 'Garamond', serif;
+    font-weight: bold;
+    font-size: 20px;
+    color:white;
+    margin-top: 20px;
+    margin-left: 10px;  /* Space from modal title */
+    opacity: 1;  /* Always visible once the modal is opened */
+    transform: scale(1); /* No scaling animation anymore */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Input fields styling */
+.contact-form-container input {
+    width: 180%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styling for both Add and Cancel */
+.contact-form-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px; /* Add space between buttons */
+    font-family: 'Garamond', serif;
+    font-weight: bold;
+}
+
+/* Styling for the Add Contact button */
+.contact-form-container button.primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Add hover effect to Add Contact button */
+.contact-form-container button.primary:hover {
+    background-color: #45a049;
+}
+
+
+/* Do NOT override the `btn-close` background or pseudo-elements */
+.modal-header .btn-close {
+    background: none; /* This is okay */
+    border: none;     /* This is okay */
+}

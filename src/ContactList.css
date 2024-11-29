@@ -1,0 +1,181 @@
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.contact-item {
+    position: relative; /* Ensures pop-up positions relative to each contact */
+    cursor: pointer;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #004c56;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.contact-name {
+    font-family: Garamond, sans-serif;
+    font-size: 1.2em;
+    color: #004c56;
+    font-weight: bold;
+}
+
+/* Pop-up styles */
+.contact-details-popup {
+    position: absolute;
+    top: 50%; /* Centered vertically */
+    transform: translateY(-50%);
+    background-color: #004c56;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 10;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+/* Pop-up appearing on the right by default */
+.popup-right {
+    left: 102%; /* Positioned next to the contact on the right */
+}
+
+/* Pop-up appearing on the left for the fourth column */
+.popup-left {
+    right: 110%; /* Positioned next to the contact on the left */
+}
+
+.contact-details-popup p {
+    margin: 5px 0;
+    font-family: Garamond, sans-serif;
+    font-size: 1.2em;
+    color: white;
+    text-align: left;
+}
+
+/* Triangle arrow pointing to the contact - default (right) */
+.popup-right::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #ccc;
+}
+
+.popup-right::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #ffffff;
+}
+
+/* Triangle arrow pointing to the contact - left side */
+.popup-left::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #ccc;
+}
+
+.popup-left::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #ffffff;
+}
+
+/* Three dots menu */
+.three-dots-menu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.contact-item:hover .three-dots-menu {
+    display: block;
+}
+
+/* Style for the dots inside the menu */
+.dots {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #004c56;
+    margin: 2px 0;
+}
+
+/* Menu options */
+.menu-options {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10px;
+    width: 120px;
+}
+
+.menu-options button {
+    background: none;
+    border: none;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu-options button:hover {
+    background-color: #f0f0f0;
+}

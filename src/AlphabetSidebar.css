@@ -1,0 +1,27 @@
+.alphabet-sidebar {
+  position: fixed;
+  top: 195px;
+  right: 5px;
+  height: 72vh; /* Ensure the sidebar takes the full height of the screen */
+  width: 23px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+  z-index: 10;
+  padding-top: 10px;
+}
+
+.letter {
+  font-size: 12px;
+  padding: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.letter:hover {
+  background-color: #ddd;
+}

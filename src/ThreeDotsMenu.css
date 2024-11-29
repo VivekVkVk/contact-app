@@ -1,0 +1,52 @@
+/* ThreeDotsMenu.css */
+.three-dots-menu {
+  position: absolute;
+  top: 220px;  /* Align with the search bar */
+  left: 1120px; /* Position near the search bar */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Stack dots vertically */
+  gap: 5px; /* Space between dots */
+}
+
+.dots {
+  display: block;
+  width: 25px; /* Size of the dot */
+  height: 3px; /* Size of the dot */
+  margin: 0px -1px; /* Space between dots */
+  background-color: black; /* Color of the dots */
+  border-radius: 0%; /* Make the dots circular */
+}
+
+.menu-options {
+  position: absolute;
+  top: 18px; /* Adjust the space between the dots and the dropdown */
+  right: 365px;
+  background-color: #004c56;
+  border: 1px solid #ddd;
+  border-radius: 20px; /* Radially curved corners */
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 150px;
+}
+
+.menu-options button {
+  background: none;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-options button:hover {
+  background-color: #005a68;
+  border-radius: 10px;
+}
